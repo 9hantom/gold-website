@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register | MJ Jewelry</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/body.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/auth.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <header>
+    <nav>
+      <div class="mineral-value">
+        <div class="gold-value"><h4>NYSE: GOLD * £34.46</h4></div>
+        <div class="ticker"><div class="metal-prices"><h4>METAL PRICES: £3,324.94 <span style="color: green;">+0.52% &uarr;</span></h4><h4>SILVER £49.83 <span style="color: brown;">-0.10% &darr;</span></h4><h4>PLATINUM £1,366.07 <span style="color:green">+1.17% &uarr;</span></h4><h4>PALLADIUM £991.88 <span style="color: green;">+0.40% &uarr;</span></h4></div></div>
+        <div class="all-charts"><a href="https://live.euronext.com/en" target="_blank" rel="noopener noreferrer"><h4>ALL CHARTS &#10140;</h4></a></div>
+      </div>
+      <div class="second-navbar">
+        <div class="logo-section"><div><img src="images/icons/IMG_8693.PNG" width="70" alt="MJ Jewelry logo"></div><div><h2>JEWELRY</h2><p>PURE GOLD. REAL VALUE.</p></div></div>
+        <ul class="nav-menu"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="collection.html" class="nav-link">Collection</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+        <div class="cart-lang"><a class="icon-link active" href="login.html" aria-label="View profile" data-tooltip="View profile"><img src="images/icons/profile-1336-svgrepo-com.svg" alt=""></a><a class="icon-link" href="cart.html" aria-label="View cart" data-tooltip="View cart"><img src="images/icons/cart-shopping-svgrepo-com.svg" alt=""></a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="auth-section">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <div class="brand-mark">MJ</div>
+          <div class="brand-copy">
+            <span class="brand-kicker">Private Access</span>
+            <strong>MJ JEWELRY</strong>
+          </div>
+        </div>
+        
+        <!-- Tabs to toggle between Login and Register -->
+        <div class="auth-tabs">
+          <a href="#login" class="tab-btn active" id="login-tab">Login</a>
+          <a href="#register" class="tab-btn" id="register-tab">Sign Up</a>
+        </div>
+
+        <div class="auth-forms">
+          <!-- LOGIN FORM -->
+          <form class="auth-form" id="login-form">
+            <h2>Welcome Back</h2>
+            <p class="form-subtitle">Log in to access your account</p>
+
+            <div class="input-group">
+              <label for="login-email">Email Address</label>
+              <input type="email" id="login-email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="input-group">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-options">
+              <label class="remember-me">
+                <input type="checkbox"> Remember me
+              </label>
+              <a href="contact.html#contact-section" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="auth-submit-btn">LOG IN</button>
+          </form>
+
+          <!-- REGISTER FORM (Hidden by default) -->
+          <form class="auth-form hidden" id="register-form">
+            <h2>Create Account</h2>
+            <p class="form-subtitle">Join us to start your collection</p>
+
+            <div class="input-group">
+              <label for="register-name">Full Name</label>
+              <input type="text" id="register-name" name="name" placeholder="John Doe" required>
+            </div>
+
+            <div class="input-group">
+              <label for="register-email">Email Address</label>
+              <input type="email" id="register-email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="input-group">
+              <label for="register-password">Password</label>
+              <input type="password" id="register-password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <div class="input-group">
+              <label for="register-confirm">Confirm Password</label>
+              <input type="password" id="register-confirm" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+
+            <button type="submit" class="auth-submit-btn">SIGN UP</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <div class="first-section"><h3><span>MJ</span> JEWELRY</h3><p>Crafting timeless elegance since 1970. Each piece tells a story of artistry, passion, and uncompromising quality.</p></div>
+      <div><h5>EXPLORE</h5><ul><li><a href="collection.html">Collections</a></li><li><a href="collection.html#rings">Rings</a></li><li><a href="collection.html#necklaces">Necklaces</a></li><li><a href="collection.html#watches">Watches</a></li></ul></div>
+      <div><h5>POLICIES</h5><ul><li><a href="contact.html#shipping">Shipping &amp; Returns</a></li><li><a href="contact.html#privacy">Privacy Policy</a></li><li><a href="contact.html#terms">Terms of Services</a></li><li><a href="contact.html#warranty">Warranty</a></li></ul></div>
+      <div class="footer-contact"><h5>CONTACTS</h5><p><a href="mailto:mjjewelry1970@gmail.com">mjjewelry1970@gmail.com</a></p><p>+4407347959475</p></div>
+    </div>
+    <div class="second-section"><p>© 2026 MJ JEWELRY. All rights reserved.</p></div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+
+</body>
+</html>

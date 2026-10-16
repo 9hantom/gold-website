@@ -1,0 +1,454 @@
+
+
+.about-section {
+  /* The background image */
+  background: url('../images/background picture/IMG_8769.PNG') center/cover no-repeat;
+  padding: 120px 80px;
+  min-height: 100vh; /* Or whatever height you need */
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  margin-top: -100px;
+}
+
+.about-content {
+  max-width: 600px; /* Keeps the text on the left side */
+  transform: translateY(-70px);
+}
+
+.about-eyebrow {
+  color: #d4b36a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.about-section h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  color: #e0e0e0;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.gold-text {
+  color: #d4b36a;
+}
+
+.about-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.story-btn {
+  background: #d4b36a;
+  color: #1a1a1a;
+  border: none;
+  padding: 14px 28px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.story-btn:hover,
+.story-btn:focus-visible {
+  background: #e0c48a;
+  transform: translateY(-1px);
+}
+
+.story-btn:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 100px 7vw;
+  }
+
+  .about-content {
+    max-width: 560px;
+    transform: translateY(-45px);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    min-height: calc(100vh - 130px);
+    padding: 70px 24px;
+    box-sizing: border-box;
+  }
+
+  .about-content {
+    transform: translateY(-25px);
+  }
+
+  .about-section h1 {
+    font-size: clamp(40px, 12vw, 56px);
+  }
+
+  .about-text {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .story-btn {
+    padding: 13px 22px;
+  }
+}
+
+
+
+.brand-story-section {
+  background: #0a0a0a;
+  padding: 120px 60px;
+  font-family: "Montserrat", sans-serif;
+  color: #e0e0e0;
+}
+
+.brand-story-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* --- LEFT COLUMN --- */
+.story-text {
+  flex: 1.2;
+}
+
+.eyebrow {
+  color: #d4b36a;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.story-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: #e0e0e0;
+  line-height: 1.2;
+  margin: 0 0 25px 0;
+}
+
+.story-desc {
+  font-size: 14px;
+  color: #a0a0a0;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.signature {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-style: italic;
+  color: #d4b36a;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.signature-line {
+  width: 80px;
+  height: 1px;
+  background: #d4b36a;
+}
+
+/* --- MIDDLE COLUMN --- */
+.story-image {
+  flex: 1;
+}
+
+.story-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .story-image img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .story-image img {
+    height: 300px;
+  }
+}
+
+/* --- RIGHT COLUMN --- */
+.story-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.feature {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-text h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e0e0e0;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.feature-text p {
+  font-size: 13px;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+
+
+.collections-section {
+  background: #d4b36a;   /* The gold background */
+  padding: 100px 60px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.collections-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* --- LEFT SIDE --- */
+.collections-text {
+  flex: 1;
+}
+
+.collections-text .eyebrow {
+  color: #1a1a1a;      /* Dark text for contrast */
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.collections-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.collections-desc {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.shop-btn {
+  background: #1a1a1a;   /* Dark button */
+  color: #d4b36a;        /* Gold text */
+  border: none;
+  padding: 14px 28px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.shop-btn:hover {
+  background: #333;
+}
+
+/* --- RIGHT SIDE (Cards) --- */
+.collections-grid {
+  display: flex;
+  gap: 15px;
+  flex: 1.5;
+}
+
+.collection-card {
+  background: #111;      /* Keep cards dark so images pop */
+  padding: 15px 10px;
+  text-align: center;
+  flex: 1;
+  overflow: hidden;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;   /* Keeps the jewelry clear */
+  margin-bottom: 20px;
+  display: block;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.45s ease;
+}
+
+.collection-card:hover img {
+  transform: scale(1.1);
+}
+
+.collection-card h4 {
+  color: #e0e0e0;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+}
+
+.card-line {
+  width: 40px;
+  height: 1px;
+  background: #d4b36a;
+  margin: 0 auto;
+}
+
+
+.commitment-section {
+  /* Replace with your actual background image path */
+  background: url('../images/background picture/IMG_8776.PNG') center/cover no-repeat;
+  padding: 120px 60px;
+  display: flex;
+  justify-content: flex-end; /* Pushes the content to the right side */
+  font-family: "Montserrat", sans-serif;
+}
+
+.commitment-content {
+  max-width: 550px; /* Keeps text from stretching across the whole screen */
+  width: 100%;
+}
+
+.commitment-content .eyebrow {
+  color: #d4b36a;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.commitment-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.commitment-desc {
+  font-size: 14px;
+  color: #a0a0a0;
+  line-height: 1.7;
+  margin-bottom: 60px;
+}
+
+/* --- Features Row --- */
+.features-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding: 0 10px;
+}
+
+/* The vertical divider lines */
+.feature-item:not(:last-child) {
+  border-right: 1px solid rgba(212, 179, 106, 0.3);
+}
+
+/* Icon placeholder styling */
+.feature-item img {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 15px;
+  /* If you need to adjust spacing for your specific icons, tweak the height/width */
+}
+
+.feature-item h4 {
+  font-size: 11px;
+  font-weight: 500;
+  color: #e0e0e0;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .brand-story-container,
+  .collections-container,
+  .collections-grid,
+  .owners-container,
+  .features-row {
+    flex-direction: column;
+  }
+
+  .brand-story-container,
+  .collections-container {
+    gap: 36px;
+  }
+
+  .collections-grid {
+    width: 100%;
+  }
+
+  .collection-card {
+    width: 100%;
+  }
+
+  .feature-item:not(:last-child) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(212, 179, 106, 0.3);
+    padding-bottom: 18px;
+  }
+}

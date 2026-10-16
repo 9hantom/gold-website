@@ -1,0 +1,536 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.mineral-value {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+  background: rgba(10, 10, 10, 0.52);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 52px;
+}
+
+.gold-value,
+.all-charts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+.all-charts{
+  cursor: pointer;
+}
+.gold-value h4,
+.all-charts h4,
+.metal-prices h4 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.gold-value {
+  width: 220px;
+}
+
+.ticker {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  position: relative;
+}
+
+.ticker::before,
+.ticker::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+}
+
+.ticker::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(10,10,10,0.9), transparent);
+}
+
+.ticker::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(10,10,10,0.9), transparent);
+}
+
+.metal-prices {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.015);
+  animation: scroll 20s linear infinite;
+}
+
+.metal-prices h4 {
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 600px) {
+  /* ↑ only apply these rules when the screen is 600px wide or smaller */
+
+  .metal-prices h4 {
+    /* ↑ target every h4 inside .metal-prices */
+
+    font-size: 12px;
+    /* ↑ make the price text smaller so it fits on a phone screen */
+  }
+
+  .metal-prices {
+    /* ↑ target the moving strip itself */
+
+    gap: 15px;
+    /* ↑ reduce space between prices (was 30px) so more fit on screen */
+
+    animation-duration: 12s;
+    /* ↑ override the 20s speed — faster scroll so it doesn't feel stuck */
+  }
+}
+
+
+.all-charts {
+  width: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  
+}
+
+.all-charts a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.all-charts a:hover,
+.all-charts a:focus-visible {
+  color: #f1d38a;
+  background: rgba(212, 179, 106, 0.12);
+  border-color: rgba(212, 179, 106, 0.55);
+  transform: translateY(-1px);
+}
+
+.all-charts a:active {
+  color: #fff;
+  background: rgba(212, 179, 106, 0.22);
+  transform: translateY(1px);
+}
+
+
+
+.second-navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(14, 14, 14, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.logo-section{
+  display: flex;
+  align-items: center;
+  width: 300px;
+  gap: 12px;
+}
+
+.logo-section img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.logo-section h2{
+  font-size: 25px;
+  margin: 0;
+  color: #d0b072;
+  font-family: "montserrat", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+.logo-section p{
+  font-size: 10px;
+  margin: 4px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.7);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 28px 0 22px;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f1d38a 0%, #c69a4e 100%);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.active {
+  color: #f1d38a;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.cart-lang{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.cart-lang > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  padding: 6px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  background: rgba(20, 20, 20, 0.95);
+  color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1002;
+}
+
+.icon-link:hover::after,
+.icon-link:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.icon-link.active {
+  border: 1px solid rgba(212, 179, 106, 0.75);
+  border-radius: 6px;
+  background: rgba(212, 179, 106, 0.14);
+  box-shadow: 0 0 0 3px rgba(212, 179, 106, 0.08);
+}
+
+.cart-lang img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.cart-lang .flag {
+  filter: none;
+}
+
+.cart-lang img:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.icon-link.active img {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(25%) saturate(700%) hue-rotate(4deg) brightness(93%);
+  opacity: 1;
+}
+
+.lang-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.lang-btn:active {
+  transform: translateY(0);
+  opacity: 0.88;
+}
+
+.lang-list {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  list-style: none;
+  padding: 8px 0;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  min-width: 160px;
+  z-index: 1000;
+  max-height: 300px;   /* Stops it from getting too tall */
+  overflow-y: auto;    /* Adds scroll if needed */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 179, 106, 0.65) transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.lang-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.lang-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lang-list::-webkit-scrollbar-thumb {
+  background: rgba(212, 179, 106, 0.55);
+  border-radius: 999px;
+  transition: background-color 0.25s ease, opacity 0.25s ease;
+}
+
+.lang-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(241, 211, 138, 0.95);
+}
+
+.lang-list li {
+  padding: 10px 16px;
+  color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between flag and text */
+  transition: background 0.2s ease;
+}
+
+.lang-list li:hover {
+  background: rgba(212, 179, 106, 0.2); /* Your gold color */
+  color: #d4b36a;
+}
+
+.flag {
+  font-size: 16px;
+}
+
+/* Show menu on hover or when focused (keyboard friendly) */
+.lang-selector:hover .lang-list,
+.lang-selector:focus-within .lang-list {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .mineral-value .gold-value,
+  .mineral-value .all-charts {
+    display: none;
+  }
+
+  .second-navbar {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding: 8px 18px;
+  }
+
+  .logo-section {
+    width: auto;
+    flex: 1 1 auto;
+  }
+
+  .logo-section img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-lang {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .nav-menu {
+    order: 3;
+    flex: 1 0 100%;
+    gap: 22px;
+  }
+
+  .nav-link {
+    padding: 12px 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .second-navbar {
+    padding: 6px 12px;
+  }
+
+  .logo-section {
+    gap: 7px;
+  }
+
+  .logo-section img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logo-section h2 {
+    font-size: 19px;
+    letter-spacing: 2px;
+  }
+
+  .logo-section p {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .nav-menu {
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .nav-menu,
+  .nav-link {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .cart-lang {
+    gap: 8px;
+  }
+
+  .lang-btn {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+
+  .cart-lang img {
+    width: 19px;
+    height: 19px;
+  }
+}

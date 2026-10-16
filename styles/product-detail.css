@@ -1,0 +1,125 @@
+@import url("footer.css");
+@import url("main.css");
+
+body {
+  background: #0a0a0a;
+  color: #e8e3da;
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-detail-page {
+  min-height: calc(100vh - 120px);
+  padding: 90px 7vw;
+  background: radial-gradient(circle at 15% 20%, rgba(212, 179, 106, 0.12), transparent 34%), #0a0a0a;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  gap: clamp(36px, 7vw, 110px);
+  max-width: 1240px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.product-detail-image {
+  width: 100%;
+  max-height: 680px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: #f5f0e8;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.product-detail-copy {
+  max-width: 520px;
+}
+
+.product-detail-category {
+  color: #d4b36a;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin: 0 0 18px;
+}
+
+.product-detail h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 0.95;
+  font-weight: 500;
+  margin: 0 0 24px;
+  color: #f0dca0;
+}
+
+.product-detail-price {
+  color: #fff;
+  font-size: 22px;
+  margin: 0 0 28px;
+}
+
+.product-detail-description {
+  color: #b6b1ad;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 34px;
+}
+
+.product-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.product-detail-button,
+.product-detail-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid #d4b36a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.product-detail-button {
+  background: #d4b36a;
+  color: #1a1a1a;
+}
+
+.product-detail-back {
+  background: transparent;
+  color: #d4b36a;
+}
+
+.product-detail-button:hover,
+.product-detail-button:focus-visible,
+.product-detail-back:hover,
+.product-detail-back:focus-visible {
+  background: #f0dca0;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.product-detail-button:active,
+.product-detail-back:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 760px) {
+  .product-detail-page {
+    padding: 56px 20px;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail h1 {
+    font-size: 54px;
+  }
+}
